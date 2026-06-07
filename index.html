@@ -22,13 +22,9 @@
       --radius-lg: 24px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -62,6 +58,8 @@
       width: min(1280px, calc(100% - 32px));
       margin: 0 auto;
       padding: 22px 0 42px;
+      position: relative;
+      z-index: 1;
     }
 
     .nav {
@@ -114,10 +112,16 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       color: rgba(16,32,34,.70);
+      font-weight: 700;
     }
 
     .nav-links a:hover {
       background: rgba(16,32,34,.06);
+    }
+
+    .account-link {
+      background: var(--steel-dark) !important;
+      color: #fffaf0 !important;
     }
 
     .hero {
@@ -177,6 +181,7 @@
       letter-spacing: .18em;
       text-transform: uppercase;
       color: rgba(255,250,240,.82);
+      font-weight: 800;
     }
 
     .eyebrow::before {
@@ -218,7 +223,7 @@
       gap: 16px;
       padding: 16px 18px;
       border-radius: 999px;
-      font-weight: 760;
+      font-weight: 800;
       letter-spacing: .01em;
       background: #fffaf0;
       color: var(--steel-dark);
@@ -261,6 +266,7 @@
       letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--muted);
+      font-weight: 800;
     }
 
     .section-header h2 {
@@ -311,18 +317,28 @@
     }
 
     .feature-grid,
-    .product-grid {
+    .product-grid,
+    .access-grid,
+    .footer-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
+    }
+
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .product-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .access-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .feature,
-    .product-card {
+    .product-card,
+    .access-card {
       min-height: 170px;
       padding: 22px;
       border-radius: var(--radius-lg);
@@ -338,7 +354,8 @@
       padding: 24px;
     }
 
-    .product-card.featured {
+    .product-card.featured,
+    .access-card.featured {
       background:
         linear-gradient(145deg, rgba(53,88,106,.96), rgba(46,78,91,.94));
       color: #fffaf0;
@@ -346,37 +363,68 @@
     }
 
     .feature span,
-    .product-card span {
+    .product-card span,
+    .access-card span {
       font-size: .68rem;
       letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--muted);
+      font-weight: 800;
     }
 
     .product-card.featured p,
-    .product-card.featured span {
+    .product-card.featured span,
+    .access-card.featured p,
+    .access-card.featured span {
       color: rgba(255,250,240,.78);
     }
 
     .feature h3,
-    .product-card h3 {
+    .product-card h3,
+    .access-card h3 {
       margin: 18px 0 8px;
       font-size: 1.28rem;
       letter-spacing: -.025em;
     }
 
-    .product-card h3 {
+    .product-card h3,
+    .access-card h3 {
       margin: 0 0 10px;
       font-size: 1.6rem;
       letter-spacing: -.035em;
     }
 
     .feature p,
-    .product-card p {
+    .product-card p,
+    .access-card p {
       margin: 0;
       color: var(--muted);
       line-height: 1.5;
       font-size: .96rem;
+    }
+
+    .access-card.featured p {
+      color: rgba(255,250,240,.80);
+    }
+
+    .mini-link {
+      margin-top: 20px;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 15px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(16,32,34,.10);
+      font-weight: 800;
+      color: var(--steel-dark);
+    }
+
+    .access-card.featured .mini-link {
+      background: rgba(255,255,255,.14);
+      color: #fffaf0;
+      border-color: rgba(255,255,255,.18);
     }
 
     .soft-band {
@@ -424,13 +472,73 @@
       color: rgba(255,250,240,.80);
     }
 
-    footer {
-      padding: 28px 4px 0;
+    .site-footer {
+      margin-top: 22px;
+      border-radius: var(--radius-xl);
+      background: #102022;
+      color: #fffaf0;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-top {
+      padding: clamp(28px, 5vw, 54px);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 30px;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .footer-top h2 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.6rem);
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .footer-top p {
+      margin: 16px 0 0;
+      max-width: 560px;
+      color: rgba(255,250,240,.70);
+      line-height: 1.55;
+    }
+
+    .footer-cta {
+      align-self: end;
+      justify-self: end;
+      display: grid;
+      gap: 10px;
+      min-width: 260px;
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+      padding: clamp(28px, 4vw, 42px);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .footer-col h3 {
+      margin: 0 0 18px;
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .footer-col a,
+    .footer-col span {
+      display: block;
+      margin: 0 0 12px;
+      color: rgba(255,250,240,.70);
+      font-size: .94rem;
+    }
+
+    .footer-bottom {
+      padding: 22px clamp(28px, 4vw, 42px);
       display: flex;
       justify-content: space-between;
       gap: 18px;
-      color: rgba(16,32,34,.58);
-      font-size: .78rem;
+      color: rgba(255,250,240,.55);
+      font-size: .82rem;
     }
 
     @media (max-width: 900px) {
@@ -439,19 +547,12 @@
         padding-top: 12px;
       }
 
-      .nav {
-        top: 8px;
-      }
+      .nav { top: 8px; }
 
-      .logo {
-        width: 132px;
-      }
+      .logo { width: 132px; }
 
-      .brand-slogan {
-        display: none;
-      }
-
-      .nav-links {
+      .brand-slogan,
+      .nav-links a:not(.account-link) {
         display: none;
       }
 
@@ -459,8 +560,18 @@
         min-height: 590px;
       }
 
-      .hero-inner {
+      .hero-inner,
+      .intro-grid,
+      .product-grid,
+      .feature-grid,
+      .soft-band,
+      .access-grid,
+      .footer-top,
+      .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
         gap: 26px;
       }
 
@@ -477,19 +588,18 @@
         margin-top: 14px;
       }
 
-      .intro-grid,
-      .product-grid,
-      .feature-grid,
-      .soft-band {
-        grid-template-columns: 1fr;
-      }
-
-      .soft-note {
+      .soft-note,
+      .footer-cta {
         justify-self: stretch;
       }
 
-      footer {
+      .footer-bottom {
         display: block;
+      }
+
+      .footer-bottom span {
+        display: block;
+        margin-bottom: 8px;
       }
     }
 
@@ -526,8 +636,9 @@
       <div class="nav-links">
         <a href="#que-es">Qué es</a>
         <a href="#producto">Producto</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="mailto:hola@mbrookie.com">Contacto</a>
+        <a href="#acceso">Acceso</a>
+        <a href="#footer">Contacto</a>
+        <a class="account-link" href="/login">Mi cuenta</a>
       </div>
     </nav>
 
@@ -545,13 +656,13 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="mailto:hola@mbrookie.com?subject=Quiero%20saber%20más%20de%20MBROOKIE">
-              <span>Conocer MBROOKIE</span>
+            <a class="btn" href="#acceso">
+              <span>Acceder a MBROOKIE</span>
               <span>→</span>
             </a>
 
             <a class="btn ghost" href="https://id.mbrookie.com/p/steel/X7QT9A-bruno-ord001/">
-              <span>Ver demo de perfil</span>
+              <span>Ver Rescue ID demo</span>
               <span>demo</span>
             </a>
           </div>
@@ -599,16 +710,16 @@
             <article class="feature">
               <span>02</span>
               <div>
-                <h3>Compañeros con identidad</h3>
-                <p>Diseñado para perros con nombre, carácter, historia y personas que los esperan.</p>
+                <h3>Privacidad primero</h3>
+                <p>Información útil en emergencia, sin exponer datos personales innecesarios.</p>
               </div>
             </article>
 
             <article class="feature">
               <span>03</span>
               <div>
-                <h3>Cuidado con privacidad</h3>
-                <p>Información útil en emergencia, presentada con claridad y criterio.</p>
+                <h3>Confianza inmediata</h3>
+                <p>Datos claros para que quien lo encuentra pueda actuar con seguridad.</p>
               </div>
             </article>
 
@@ -628,7 +739,7 @@
       <div class="section-inner">
         <div class="section-header">
           <div>
-            <p class="kicker">Primer producto</p>
+            <p class="kicker">Producto</p>
             <h2>El tag es la entrada.</h2>
           </div>
 
@@ -640,7 +751,7 @@
 
         <div class="product-grid">
           <article class="product-card featured">
-            <span>Rescue Tag</span>
+            <span>Rescue ID</span>
             <div>
               <h3>Protección visible</h3>
               <p>
@@ -661,11 +772,11 @@
           </article>
 
           <article class="product-card">
-            <span>Companion ID</span>
+            <span>Registro preventivo</span>
             <div>
-              <h3>Conexión humana</h3>
+              <h3>Más confianza</h3>
               <p>
-                Una primera capa para reconocer al humano detrás de cada compañero de aventura.
+                Vacunación y desparasitación visibles para quien necesite resguardar al perro.
               </p>
             </div>
           </article>
@@ -673,48 +784,47 @@
       </div>
     </section>
 
-    <section class="section" id="experiencia">
+    <section class="section" id="acceso">
       <div class="section-inner">
         <div class="section-header">
           <div>
-            <p class="kicker">Experiencia MBROOKIE</p>
-            <h2>Diseñado para compañeros con historia.</h2>
+            <p class="kicker">Acceso</p>
+            <h2>Tu cuenta MBROOKIE.</h2>
           </div>
 
           <p>
-            Cada perro tiene una forma distinta de caminar, esperar, correr,
-            explorar y volver. MBROOKIE parte de esa identidad.
+            Cuando el producto esté activo, los clientes podrán entrar desde aquí
+            para consultar y administrar sus perfiles de forma privada.
           </p>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <span>Aventura</span>
+        <div class="access-grid">
+          <article class="access-card featured">
+            <span>Clientes</span>
             <div>
-              <h3>Salidas compartidas</h3>
+              <h3>Acceder a mi cuenta</h3>
               <p>
-                Bosque, playa, ciudad, montaña o banqueta diaria. El vínculo también vive en lo cotidiano.
+                Entrada privada para consultar perfiles, Companion ID, Rescue ID
+                y futuras aventuras registradas.
               </p>
+              <a class="mini-link" href="/login">
+                <span>Entrar</span>
+                <span>→</span>
+              </a>
             </div>
           </article>
 
-          <article class="product-card">
-            <span>Identidad</span>
+          <article class="access-card">
+            <span>Explorar</span>
             <div>
-              <h3>Presencia única</h3>
+              <h3>Ver Rescue ID demo</h3>
               <p>
-                Cada compañero tiene nombre, carácter, historia y un lugar propio dentro de su familia.
+                Conoce cómo se ve un perfil de rescate público cuando alguien escanea un tag.
               </p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <span>Memoria</span>
-            <div>
-              <h3>Momentos que permanecen</h3>
-              <p>
-                Algunas aventuras se viven una vez, pero se recuerdan toda la vida.
-              </p>
+              <a class="mini-link" href="https://id.mbrookie.com/p/steel/X7QT9A-bruno-ord001/">
+                <span>Ver demo</span>
+                <span>→</span>
+              </a>
             </div>
           </article>
         </div>
@@ -728,7 +838,7 @@
         <p>
           MBROOKIE está en su primera etapa. Estamos construyendo una experiencia
           para quienes aman salir al mundo con sus perros y quieren cuidarlos con diseño,
-          tecnología y corazón.
+          tecnología y criterio.
         </p>
       </div>
 
@@ -740,9 +850,63 @@
       </div>
     </section>
 
-    <footer>
-      <span>Built for connection</span>
-      <span>© 2026 MBROOKIE</span>
+    <footer class="site-footer" id="footer">
+      <div class="footer-top">
+        <div>
+          <h2>Built for connection.</h2>
+          <p>
+            Identificación, cuidado y aventura para perros y humanos que comparten camino.
+          </p>
+        </div>
+
+        <div class="footer-cta">
+          <a class="btn" href="mailto:hola@mbrookie.com?subject=Quiero%20saber%20más%20de%20MBROOKIE">
+            <span>Contacto</span>
+            <span>→</span>
+          </a>
+
+          <a class="btn ghost" href="/login">
+            <span>Mi cuenta</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MBROOKIE</h3>
+          <a href="#que-es">Qué es</a>
+          <a href="#producto">Producto</a>
+          <a href="#acceso">Acceso clientes</a>
+          <a href="https://id.mbrookie.com/p/steel/X7QT9A-bruno-ord001/">Rescue ID demo</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Producto</h3>
+          <span>Rescue ID</span>
+          <span>Companion ID</span>
+          <span>Registro preventivo</span>
+          <span>Pasaporte de aventuras</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <a href="/aviso-de-privacidad">Aviso de privacidad</a>
+          <a href="mailto:hola@mbrookie.com">Contacto</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Comunidad</h3>
+          <a href="https://www.instagram.com/mbrookie" target="_blank" rel="noopener">Instagram</a>
+          <span>Facebook · Próximamente</span>
+          <span>TikTok · Próximamente</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 MBROOKIE</span>
+        <span>Built for connection</span>
+      </div>
     </footer>
 
   </main>
