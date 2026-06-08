@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Garantías y Devoluciones | MBROOKIE</title>
+  <meta name="description" content="Política de garantías, devoluciones y reembolsos de MBROOKIE para productos personalizados, tags, credenciales, QR y NFC." />
+
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --paper: #fffaf0;
+      --ink: #1f2d35;
+      --muted: #6f7b7f;
+      --blue: #2f5968;
+      --blue-dark: #1d3f4d;
+      --line: rgba(31, 45, 53, 0.14);
+      --soft: rgba(47, 89, 104, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 89, 104, 0.14), transparent 34%),
+        linear-gradient(180deg, #f8f5ee 0%, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 34px 22px 24px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(245, 241, 232, 0.82);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      font-size: 14px;
+      color: var(--blue-dark);
+      text-decoration: none;
+    }
+
+    .back {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 58px 22px 80px;
+    }
+
+    .hero { margin-bottom: 42px; }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.04;
+      margin: 0 0 18px;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+
+    .intro {
+      max-width: 720px;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .document {
+      background: rgba(255, 250, 240, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 24px 70px rgba(31, 45, 53, 0.08);
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 42px 0 12px;
+      color: var(--blue-dark);
+      letter-spacing: -0.02em;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    p { margin: 0 0 16px; }
+
+    ul {
+      margin: 0 0 18px;
+      padding-left: 22px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    strong { color: var(--ink); }
+
+    .note {
+      background: var(--soft);
+      border-left: 4px solid var(--blue);
+      padding: 18px 20px;
+      border-radius: 16px;
+      margin: 28px 0;
+      color: var(--ink);
+    }
+
+    .contact-card {
+      margin-top: 34px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(47, 89, 104, 0.08);
+      border: 1px solid rgba(47, 89, 104, 0.18);
+    }
+
+    a { color: var(--blue-dark); }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 22px 44px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-dark);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      header { position: static; }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main { padding-top: 40px; }
+
+      .document { border-radius: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="https://mbrookie.com">MBROOKIE</a>
+      <a class="back" href="https://mbrookie.com">Volver a mbrookie.com</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Legal · Garantías</div>
+      <h1>Garantías y Devoluciones</h1>
+      <p class="intro">
+        Esta política establece las condiciones aplicables a productos personalizados MBROOKIE, incluyendo tags, credenciales, perfiles digitales, códigos QR y tecnología NFC.
+      </p>
+    </section>
+
+    <article class="document">
+      <h2>1. Objetivo</h2>
+      <p>
+        La presente Política de Garantías, Devoluciones y Reembolsos establece las condiciones aplicables a los productos y servicios comercializados por MBROOKIE.
+      </p>
+      <p>
+        Al realizar una compra, el cliente reconoce haber leído y aceptado esta política, así como los Términos y Condiciones y el Aviso de Privacidad de MBROOKIE.
+      </p>
+
+      <h2>2. Naturaleza de los productos MBROOKIE</h2>
+      <p>
+        Los productos MBROOKIE son fabricados, configurados o preparados de forma personalizada para cada cliente.
+      </p>
+      <p>La personalización puede incluir, entre otros elementos:</p>
+      <ul>
+        <li>Nombre de la mascota.</li>
+        <li>Nombre del companion o responsable.</li>
+        <li>Fotografías.</li>
+        <li>Identificadores únicos.</li>
+        <li>Códigos QR.</li>
+        <li>Programación NFC.</li>
+        <li>Información de contacto.</li>
+        <li>Colores, acabados o configuraciones seleccionadas por el cliente.</li>
+        <li>Perfiles digitales asociados al producto.</li>
+      </ul>
+      <p>
+        Debido a esta naturaleza personalizada, aplican condiciones especiales de cancelación, devolución y reembolso.
+      </p>
+
+      <h2>3. Responsabilidad del cliente antes de confirmar su pedido</h2>
+      <p>
+        Antes de confirmar una compra, el cliente es responsable de revisar cuidadosamente toda la información proporcionada.
+      </p>
+      <p>Esto incluye:</p>
+      <ul>
+        <li>Ortografía de nombres.</li>
+        <li>Números telefónicos.</li>
+        <li>Correos electrónicos.</li>
+        <li>Fotografías enviadas.</li>
+        <li>Datos de personalización.</li>
+        <li>Selección de color, acabado o modelo.</li>
+        <li>Información asociada al perfil digital.</li>
+        <li>Datos necesarios para la programación QR o NFC.</li>
+      </ul>
+      <p>
+        Una vez confirmado el pedido, la información proporcionada se considerará revisada y aprobada por el cliente.
+      </p>
+
+      <h2>4. Cambios antes de producción</h2>
+      <p>
+        El cliente podrá solicitar ajustes únicamente antes de que MBROOKIE haya iniciado el proceso de producción, personalización, programación o preparación del pedido.
+      </p>
+      <p>
+        MBROOKIE podrá confirmar si el cambio solicitado todavía es viable. En caso de que el proceso ya haya iniciado, MBROOKIE no estará obligada a realizar modificaciones sin costo.
+      </p>
+
+      <h2>5. Cancelaciones</h2>
+      <p>
+        Las cancelaciones solo podrán solicitarse antes del inicio de producción, personalización, programación o preparación del pedido.
+      </p>
+      <p>
+        Una vez iniciado cualquiera de dichos procesos, el pedido no podrá cancelarse ni reembolsarse por cambio de opinión, error de captura del cliente o modificación posterior de preferencias.
+      </p>
+
+      <h2>6. Devoluciones no elegibles</h2>
+      <p>
+        No serán elegibles para devolución, cancelación o reembolso los productos personalizados cuando la solicitud derive de:
+      </p>
+      <ul>
+        <li>Errores de captura realizados por el cliente.</li>
+        <li>Cambios de opinión posteriores a la compra.</li>
+        <li>Modificaciones de nombres.</li>
+        <li>Cambios de fotografías.</li>
+        <li>Actualización posterior de números telefónicos.</li>
+        <li>Cambios de dirección de correo electrónico.</li>
+        <li>Preferencias de color, acabado, tamaño o diseño previamente aprobadas.</li>
+        <li>Daños ocasionados por uso indebido.</li>
+        <li>Daños ocasionados por mascotas, mordidas, rasguños, jalones o impactos.</li>
+        <li>Daños ocasionados por accesorios, collares, arneses o herrajes de terceros.</li>
+        <li>Desgaste normal por uso.</li>
+        <li>Pérdida, robo o extravío del producto después de la entrega.</li>
+      </ul>
+
+      <h2>7. Garantía por defectos de fabricación</h2>
+      <p>
+        MBROOKIE garantiza que sus productos serán entregados libres de defectos atribuibles al proceso de fabricación, personalización o programación realizado por MBROOKIE.
+      </p>
+      <p>Se considerarán defectos de fabricación, entre otros:</p>
+      <ul>
+        <li>Errores de producción respecto a la información previamente aprobada.</li>
+        <li>Defectos estructurales visibles al momento de la entrega.</li>
+        <li>Problemas de impresión atribuibles al proceso productivo.</li>
+        <li>Fallas de ensamblaje atribuibles a MBROOKIE.</li>
+        <li>Programación incorrecta de QR o NFC realizada por MBROOKIE.</li>
+        <li>Producto entregado distinto al modelo, color o acabado confirmado.</li>
+      </ul>
+      <p>
+        Cuando se confirme un defecto atribuible a MBROOKIE, MBROOKIE podrá, según corresponda y de acuerdo con la naturaleza del caso:
+      </p>
+      <ul>
+        <li>Reparar el producto.</li>
+        <li>Reponer el producto.</li>
+        <li>Corregir la programación o configuración digital.</li>
+        <li>Emitir un reembolso parcial o total cuando la reparación o reposición no sea viable.</li>
+      </ul>
+
+      <h2>8. Plazo para reportar incidencias</h2>
+      <p>
+        El cliente deberá reportar cualquier incidencia, daño visible o posible defecto de fabricación dentro de los primeros 15 días naturales posteriores a la recepción del pedido.
+      </p>
+      <p>
+        Las solicitudes realizadas fuera de dicho periodo podrán ser evaluadas caso por caso, sin que ello implique obligación automática de reposición, devolución o reembolso.
+      </p>
+
+      <h2>9. Evidencia requerida</h2>
+      <p>
+        Para evaluar cualquier solicitud de garantía, cambio, devolución o reembolso, MBROOKIE podrá solicitar:
+      </p>
+      <ul>
+        <li>Número de pedido o comprobante de compra.</li>
+        <li>Nombre del cliente.</li>
+        <li>Descripción clara del problema.</li>
+        <li>Fotografías del producto recibido.</li>
+        <li>Video corto mostrando la falla, cuando sea necesario.</li>
+        <li>Capturas de pantalla en caso de incidencias digitales.</li>
+        <li>Fotografía del empaque exterior si el daño pudo ocurrir durante el envío.</li>
+      </ul>
+      <p>
+        La falta de evidencia suficiente podrá impedir o limitar la evaluación de la solicitud.
+      </p>
+
+      <h2>10. Desgaste normal y uso en exteriores</h2>
+      <p>
+        Los productos MBROOKIE están diseñados para acompañar actividades cotidianas y aventuras al aire libre. Sin embargo, el uso continuo puede generar desgaste normal.
+      </p>
+      <p>El desgaste normal puede derivarse de:</p>
+      <ul>
+        <li>Fricción constante.</li>
+        <li>Exposición solar.</li>
+        <li>Agua dulce o salada.</li>
+        <li>Arena, tierra, lodo o polvo.</li>
+        <li>Golpes, caídas o impactos.</li>
+        <li>Arañazos.</li>
+        <li>Mordidas.</li>
+        <li>Contacto con superficies abrasivas.</li>
+        <li>Uso rudo o condiciones ambientales variables.</li>
+      </ul>
+      <p>
+        Estos efectos forman parte del uso esperado del producto y no constituyen, por sí mismos, defectos de fabricación.
+      </p>
+
+      <h2>11. Uso indebido o alteración del producto</h2>
+      <p>
+        La garantía no cubrirá daños derivados de:
+      </p>
+      <ul>
+        <li>Uso distinto a la finalidad del producto.</li>
+        <li>Manipulación, perforación, corte, lijado o alteración del producto.</li>
+        <li>Uso de químicos, solventes, abrasivos o limpiadores agresivos.</li>
+        <li>Exposición a calor extremo, fuego o presión excesiva.</li>
+        <li>Instalación incorrecta en collares, arneses o accesorios.</li>
+        <li>Intentos de reparación realizados por terceros.</li>
+        <li>Daños ocasionados por mordidas, jalones o fuerza excesiva de la mascota.</li>
+      </ul>
+
+      <h2>12. Tecnología QR y NFC</h2>
+      <p>
+        Los códigos QR y dispositivos NFC son herramientas tecnológicas sujetas a factores externos.
+      </p>
+      <p>
+        MBROOKIE garantiza que dichas tecnologías serán entregadas funcionales al momento de la fabricación, programación y despacho, siempre que el dispositivo lector sea compatible y exista conectividad suficiente.
+      </p>
+      <p>MBROOKIE no garantiza:</p>
+      <ul>
+        <li>Compatibilidad universal con todos los dispositivos móviles.</li>
+        <li>Disponibilidad permanente de internet.</li>
+        <li>Funcionamiento de aplicaciones, navegadores o sistemas operativos de terceros.</li>
+        <li>Lectura correcta cuando existan daños físicos posteriores a la entrega.</li>
+        <li>Funcionamiento si el cliente modifica, elimina o desactualiza la información del perfil.</li>
+        <li>Funcionamiento si el servicio externo del dispositivo del usuario presenta restricciones o fallas.</li>
+      </ul>
+
+      <h2>13. Perfiles digitales e información del cliente</h2>
+      <p>
+        La información asociada a perfiles digitales, códigos QR o NFC es proporcionada por el cliente.
+      </p>
+      <p>
+        MBROOKIE no será responsable por errores, omisiones, falta de actualización, teléfonos incorrectos, correos desactualizados, fotografías no vigentes o datos incompletos proporcionados por el cliente.
+      </p>
+      <p>
+        La actualización de información posterior a la compra podrá estar sujeta a disponibilidad técnica, políticas internas, condiciones del servicio o costos adicionales cuando implique reprocesamiento, rediseño, reprogramación o fabricación de un nuevo producto.
+      </p>
+
+      <h2>14. Productos dañados durante el transporte</h2>
+      <p>
+        Si el producto llega visiblemente dañado durante el envío, el cliente deberá reportarlo a MBROOKIE dentro de las primeras 48 horas posteriores a la recepción.
+      </p>
+      <p>
+        El reporte deberá incluir fotografías del producto, empaque exterior, guía de envío y cualquier evidencia útil para documentar el daño.
+      </p>
+      <p>
+        MBROOKIE evaluará cada caso para determinar si procede una reposición, reclamación con la paquetería o solución equivalente.
+      </p>
+
+      <h2>15. Entregas, dirección incorrecta y paquetes no reclamados</h2>
+      <p>
+        El cliente es responsable de proporcionar una dirección de entrega correcta, completa y vigente.
+      </p>
+      <p>
+        MBROOKIE no será responsable por retrasos, devoluciones, entregas fallidas o costos adicionales derivados de datos de envío incorrectos, incompletos o desactualizados proporcionados por el cliente.
+      </p>
+      <p>
+        Si un paquete es devuelto por imposibilidad de entrega, ausencia del destinatario, rechazo de recepción o falta de reclamación, el reenvío podrá generar costos adicionales a cargo del cliente.
+      </p>
+
+      <h2>16. Diferencias razonables de color, textura o acabado</h2>
+      <p>
+        El cliente reconoce que pueden existir variaciones razonables entre las imágenes digitales mostradas en pantalla y el producto físico recibido.
+      </p>
+      <p>
+        Estas variaciones pueden deberse a calibración de monitores, iluminación, procesos de impresión, materiales, acabados, resinas, metales, recubrimientos o condiciones propias de fabricación.
+      </p>
+      <p>
+        Las variaciones razonables de color, textura, brillo o acabado no constituirán defecto de fabricación, salvo que el producto difiera sustancialmente de lo confirmado por MBROOKIE.
+      </p>
+
+      <h2>17. Reembolsos</h2>
+      <p>
+        Los reembolsos únicamente podrán proceder cuando:
+      </p>
+      <ul>
+        <li>Exista imposibilidad de corregir un defecto atribuible a MBROOKIE.</li>
+        <li>El producto entregado difiera sustancialmente del producto confirmado.</li>
+        <li>Exista una circunstancia excepcional determinada por MBROOKIE.</li>
+        <li>La legislación aplicable así lo exija.</li>
+      </ul>
+      <p>
+        Los reembolsos aprobados se realizarán mediante el mismo método de pago utilizado originalmente, cuando sea posible.
+      </p>
+      <p>
+        Los tiempos de procesamiento podrán depender de bancos, pasarelas de pago o proveedores externos.
+      </p>
+
+      <h2>18. Costos de envío en cambios o reposiciones</h2>
+      <p>
+        Cuando el cambio o reposición proceda por defecto atribuible a MBROOKIE, MBROOKIE podrá cubrir los costos razonables de envío asociados a la solución aprobada.
+      </p>
+      <p>
+        Cuando la solicitud derive de error del cliente, cambio de opinión, dirección incorrecta o modificación posterior al pedido, los costos de envío, reprocesamiento o reposición podrán correr a cargo del cliente.
+      </p>
+
+      <h2>19. Casos sujetos a evaluación</h2>
+      <p>
+        MBROOKIE podrá evaluar caso por caso solicitudes que no encuadren expresamente en esta política.
+      </p>
+      <p>
+        La evaluación excepcional de un caso no implica renuncia a esta política ni obligación de resolver de la misma manera solicitudes futuras.
+      </p>
+
+      <h2>20. Relación con otros documentos legales</h2>
+      <p>
+        Esta política forma parte integral de los Términos y Condiciones de MBROOKIE.
+      </p>
+      <p>
+        El tratamiento de datos personales se regirá por el Aviso de Privacidad vigente.
+      </p>
+
+      <h2>21. Modificaciones a esta política</h2>
+      <p>
+        MBROOKIE podrá actualizar esta Política de Garantías, Devoluciones y Reembolsos cuando resulte necesario por cambios operativos, comerciales, tecnológicos, legales o de producto.
+      </p>
+      <p>
+        La versión vigente será publicada en:
+        <a href="https://mbrookie.com/garantias-y-devoluciones/">https://mbrookie.com/garantias-y-devoluciones/</a>.
+      </p>
+
+      <h2>22. Contacto</h2>
+      <p>
+        Para cualquier solicitud relacionada con garantías, devoluciones o reembolsos, el cliente podrá comunicarse al correo:
+        <a href="mailto:mbrookie.outdoor@gmail.com">mbrookie.outdoor@gmail.com</a>.
+      </p>
+      <p>
+        MBROOKIE procurará responder en un plazo razonable y brindar una solución acorde con cada situación particular.
+      </p>
+
+      <div class="contact-card">
+        <p><strong>Contacto para garantías</strong></p>
+        <p>
+          Correo electrónico:
+          <a href="mailto:mbrookie.outdoor@gmail.com">mbrookie.outdoor@gmail.com</a>
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://mbrookie.com/aviso-de-privacidad/">Aviso de Privacidad</a>
+      <a href="https://mbrookie.com/terminos-y-condiciones/">Términos y Condiciones</a>
+      <a href="https://mbrookie.com/garantias-y-devoluciones/">Garantías y Devoluciones</a>
+      <a href="mailto:mbrookie.outdoor@gmail.com">Contacto</a>
+    </div>
+    <div>© 2026 MBROOKIE. Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>
