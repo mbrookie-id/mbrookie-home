@@ -332,6 +332,101 @@
     .product-grid { grid-template-columns: repeat(3, 1fr); }
     .access-grid { grid-template-columns: repeat(2, 1fr); }
 
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .achievement-card {
+      position: relative;
+      min-height: 180px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.58), rgba(246,243,237,.72));
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .achievement-card::before {
+      content: "";
+      position: absolute;
+      right: -34px;
+      top: -34px;
+      width: 112px;
+      height: 112px;
+      border-radius: 999px;
+      border: 1px solid rgba(182,95,42,.18);
+      background: radial-gradient(circle, rgba(182,95,42,.10), transparent 62%);
+      pointer-events: none;
+    }
+
+    .achievement-card.featured-achievement {
+      background:
+        linear-gradient(145deg, rgba(33,60,53,.96), rgba(46,78,91,.92));
+      color: #fffaf0;
+      border-color: rgba(255,255,255,.16);
+    }
+
+    .achievement-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(182,95,42,.10);
+      color: var(--copper);
+      font-size: 1.15rem;
+      font-weight: 900;
+    }
+
+    .achievement-card.featured-achievement .achievement-icon {
+      background: rgba(255,250,240,.13);
+      color: #fffaf0;
+    }
+
+    .achievement-card h3 {
+      position: relative;
+      margin: 22px 0 8px;
+      font-size: 1.22rem;
+      letter-spacing: -.025em;
+    }
+
+    .achievement-card p {
+      position: relative;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.48;
+      font-size: .92rem;
+    }
+
+    .achievement-card.featured-achievement p {
+      color: rgba(255,250,240,.76);
+    }
+
+    .status-pill {
+      position: relative;
+      width: fit-content;
+      margin-top: 18px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(16,32,34,.10);
+      color: rgba(16,32,34,.58);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 850;
+    }
+
+    .achievement-card.featured-achievement .status-pill {
+      border-color: rgba(255,255,255,.18);
+      color: rgba(255,250,240,.70);
+    }
+
     .feature,
     .product-card,
     .access-card {
@@ -663,6 +758,7 @@
       .product-grid,
       .feature-grid,
       .access-grid,
+      .achievement-grid,
       .passport-band,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -744,6 +840,7 @@
       <div class="nav-links">
         <a href="#que-es">Qué es</a>
         <a href="#producto">Explorer Kit</a>
+        <a href="#logros">Logros</a>
         <a href="#experiencia">Experiencia</a>
         <a class="account-link" href="/login">Mi cuenta</a>
       </div>
@@ -884,6 +981,97 @@
       </div>
     </section>
 
+
+    <section class="section" id="logros">
+      <div class="section-inner">
+        <div class="section-header">
+          <div>
+            <p class="kicker copper">Historias de exploradores</p>
+            <h2>Logros de explorador.</h2>
+          </div>
+
+          <p>
+            Algunas aventuras duran un día. Otras se recuerdan toda la vida.
+            Aquí empieza el sistema de insignias, pasaportes y recuerdos de MBROOKIE.
+          </p>
+        </div>
+
+        <div class="achievement-grid">
+          <article class="achievement-card featured-achievement">
+            <div>
+              <div class="achievement-icon">01</div>
+              <h3>Primera playa</h3>
+              <p>Para ese primer encuentro con la arena, el mar y las huellas que se borran con la siguiente ola.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">02</div>
+              <h3>Primer bosque</h3>
+              <p>Un recuerdo para quienes descubren el olor a tierra húmeda, sombra y camino.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">03</div>
+              <h3>Primer sendero</h3>
+              <p>El inicio de una ruta compartida: pasos pequeños, mirada curiosa y una historia nueva.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">04</div>
+              <h3>Primer viaje</h3>
+              <p>Porque algunas memorias empiezan cuando una puerta se abre y alguien dice: vámonos.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">05</div>
+              <h3>Nadador experto</h3>
+              <p>Para los que no sólo entran al agua: la conquistan con emoción, confianza y mucha personalidad.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">06</div>
+              <h3>Explorador nocturno</h3>
+              <p>Caminatas bajo otra luz, rutas silenciosas y aventuras que también suceden después del sol.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">07</div>
+              <h3>100 km recorridos</h3>
+              <p>Una insignia para celebrar la constancia: paseo a paseo, ruta a ruta, historia a historia.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+
+          <article class="achievement-card">
+            <div>
+              <div class="achievement-icon">08</div>
+              <h3>Compañero de campamento</h3>
+              <p>Para los que entienden que dormir bajo el cielo también puede sentirse como hogar.</p>
+            </div>
+            <div class="status-pill">En construcción</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="experiencia">
       <div class="section-inner">
         <div class="section-header">
@@ -893,7 +1081,7 @@
           </div>
 
           <p>
-            Rescue ID, Companion ID y futuras aventuras.
+            Perfiles, acceso privado y futuras herramientas para documentar cada historia.
           </p>
         </div>
 
@@ -934,8 +1122,8 @@
         <p class="kicker copper">Pasaporte de aventuras</p>
         <h2>Conectados para explorar. Unidos para cuidar.</h2>
         <p>
-          MBROOKIE sigue construyendo una experiencia para documentar caminos,
-          logros y recuerdos junto a tu compañero de aventuras.
+          Porque cada salida puede convertirse en una historia.
+          Y cada historia merece volver a casa.
         </p>
       </div>
 
@@ -972,7 +1160,7 @@
           <h3>Producto</h3>
           <span>Rescue ID</span>
           <span>Companion ID</span>
-          <span>Registro preventivo</span>
+          <span>Logros de explorador</span>
           <span>Pasaporte de aventuras</span>
         </div>
 
