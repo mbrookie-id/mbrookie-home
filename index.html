@@ -339,92 +339,86 @@
     }
 
     .achievement-card {
-      position: relative;
-      min-height: 180px;
-      padding: 20px;
+      min-height: 230px;
+      padding: 24px;
       border-radius: var(--radius-lg);
       border: 1px solid var(--line);
-      background:
-        linear-gradient(145deg, rgba(255,255,255,.58), rgba(246,243,237,.72));
-      overflow: hidden;
+      background: rgba(255,255,255,.46);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .achievement-card::before {
-      content: "";
-      position: absolute;
-      right: -34px;
-      top: -34px;
-      width: 112px;
-      height: 112px;
-      border-radius: 999px;
-      border: 1px solid rgba(182,95,42,.18);
-      background: radial-gradient(circle, rgba(182,95,42,.10), transparent 62%);
-      pointer-events: none;
-    }
-
-    .achievement-card.featured-achievement {
-      background:
-        linear-gradient(145deg, rgba(33,60,53,.96), rgba(46,78,91,.92));
-      color: #fffaf0;
-      border-color: rgba(255,255,255,.16);
+    .achievement-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 22px;
     }
 
     .achievement-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: rgba(182,95,42,.10);
+      width: 42px;
+      height: 42px;
       color: var(--copper);
-      font-size: 1.15rem;
-      font-weight: 900;
+      flex: 0 0 auto;
     }
 
-    .achievement-card.featured-achievement .achievement-icon {
-      background: rgba(255,250,240,.13);
-      color: #fffaf0;
+    .achievement-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .achievement-number {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--copper);
+      letter-spacing: .02em;
     }
 
     .achievement-card h3 {
-      position: relative;
-      margin: 22px 0 8px;
-      font-size: 1.22rem;
-      letter-spacing: -.025em;
+      margin: 0 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.05;
+      letter-spacing: -.035em;
     }
 
     .achievement-card p {
-      position: relative;
       margin: 0;
       color: var(--muted);
       line-height: 1.48;
-      font-size: .92rem;
-    }
-
-    .achievement-card.featured-achievement p {
-      color: rgba(255,250,240,.76);
+      font-size: .95rem;
     }
 
     .status-pill {
-      position: relative;
+      margin-top: 24px;
       width: fit-content;
-      margin-top: 18px;
-      padding: 7px 10px;
+      padding: 8px 13px;
       border-radius: 999px;
-      border: 1px solid rgba(16,32,34,.10);
+      border: 1px solid var(--line);
       color: rgba(16,32,34,.58);
       font-size: .62rem;
-      letter-spacing: .14em;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      font-weight: 850;
+      font-weight: 900;
+      background: rgba(255,255,255,.48);
     }
 
-    .achievement-card.featured-achievement .status-pill {
-      border-color: rgba(255,255,255,.18);
-      color: rgba(255,250,240,.70);
+    .achievement-note {
+      margin: 32px auto 0;
+      max-width: 720px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .achievement-note strong {
+      color: var(--ink);
     }
 
     .feature,
@@ -997,9 +991,17 @@
         </div>
 
         <div class="achievement-grid">
-          <article class="achievement-card featured-achievement">
+          <article class="achievement-card">
             <div>
-              <div class="achievement-icon">01</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M7 30c5-8 10-8 15 0s10 8 19 0"/>
+                    <path d="M7 38c5-4 10-4 15 0s10 4 19 0"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">01</div>
+              </div>
               <h3>Primera playa</h3>
               <p>Para ese primer encuentro con la arena, el mar y las huellas que se borran con la siguiente ola.</p>
             </div>
@@ -1008,7 +1010,19 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">02</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M16 8v32"/>
+                    <path d="M16 12l-7 8h14l-7-8Z"/>
+                    <path d="M16 22l-9 9h18l-9-9Z"/>
+                    <path d="M32 8v32"/>
+                    <path d="M32 13l-7 8h14l-7-8Z"/>
+                    <path d="M32 24l-9 9h18l-9-9Z"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">02</div>
+              </div>
               <h3>Primer bosque</h3>
               <p>Un recuerdo para quienes descubren el olor a tierra húmeda, sombra y camino.</p>
             </div>
@@ -1017,7 +1031,16 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">03</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M6 38h36"/>
+                    <path d="M10 36l10-22 7 12 5-8 8 18"/>
+                    <path d="M20 14l3 9 4 3"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">03</div>
+              </div>
               <h3>Primer sendero</h3>
               <p>El inicio de una ruta compartida: pasos pequeños, mirada curiosa y una historia nueva.</p>
             </div>
@@ -1026,7 +1049,20 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">04</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <rect x="15" y="10" width="18" height="28" rx="4"/>
+                    <path d="M19 10V7h10v3"/>
+                    <path d="M15 19h18"/>
+                    <path d="M19 38v4"/>
+                    <path d="M29 38v4"/>
+                    <path d="M11 18v14"/>
+                    <path d="M37 18v14"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">04</div>
+              </div>
               <h3>Primer viaje</h3>
               <p>Porque algunas memorias empiezan cuando una puerta se abre y alguien dice: vámonos.</p>
             </div>
@@ -1035,16 +1071,33 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">05</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M7 24c5-4 10-4 15 0s10 4 19 0"/>
+                    <path d="M7 32c5-4 10-4 15 0s10 4 19 0"/>
+                    <path d="M7 40c5-4 10-4 15 0s10 4 19 0"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">05</div>
+              </div>
               <h3>Nadador experto</h3>
-              <p>Para los que no sólo entran al agua: la conquistan con emoción, confianza y mucha personalidad.</p>
+              <p>Para quienes no sólo entran al agua: la conquistan con emoción, confianza y mucha personalidad.</p>
             </div>
             <div class="status-pill">En construcción</div>
           </article>
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">06</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M31 7a16 16 0 1 0 10 26 13 13 0 0 1-10-26Z"/>
+                    <path d="M15 13l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">06</div>
+              </div>
               <h3>Explorador nocturno</h3>
               <p>Caminatas bajo otra luz, rutas silenciosas y aventuras que también suceden después del sol.</p>
             </div>
@@ -1053,7 +1106,17 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">07</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M12 33c5-6 8-6 12 0s7 6 12 0"/>
+                    <path d="M13 22h22"/>
+                    <path d="M16 16h16"/>
+                    <path d="M19 10h10"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">07</div>
+              </div>
               <h3>100 km recorridos</h3>
               <p>Una insignia para celebrar la constancia: paseo a paseo, ruta a ruta, historia a historia.</p>
             </div>
@@ -1062,13 +1125,29 @@
 
           <article class="achievement-card">
             <div>
-              <div class="achievement-icon">08</div>
+              <div class="achievement-top">
+                <div class="achievement-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M10 39h28"/>
+                    <path d="M24 10l14 29H10L24 10Z"/>
+                    <path d="M24 10v29"/>
+                    <path d="M18 17l-4-6"/>
+                    <path d="M30 17l4-6"/>
+                  </svg>
+                </div>
+                <div class="achievement-number">08</div>
+              </div>
               <h3>Compañero de campamento</h3>
               <p>Para los que entienden que dormir bajo el cielo también puede sentirse como hogar.</p>
             </div>
             <div class="status-pill">En construcción</div>
           </article>
         </div>
+
+        <p class="achievement-note">
+          Cada logro es una huella. Cada huella, una historia que crece contigo.
+          <strong>MBROOKIE está construyendo este mundo, paso a paso.</strong>
+        </p>
       </div>
     </section>
 
